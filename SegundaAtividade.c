@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 double multiplicacao(double a, double b){
     double mult;
@@ -9,6 +10,10 @@ double multiplicacao(double a, double b){
 
 double divisao(char* a, char* b){
     double aFloat = atof(a), bFloat = atof(b);
+    if(b == 0){
+        printf("Divisao por 0 impossivel\n");
+        return;
+    }
     return aFloat/bFloat;
 }
 
